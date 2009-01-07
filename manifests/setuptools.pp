@@ -10,9 +10,9 @@ class python::setuptools::base {
     package{'python-setuptools':
         ensure => installed,
     }
-
+}
 class python::setuptools::centos inherits python::setuptools::base {
     Package['python-setuptools']{
-        name => 'setuptools'
+        name => 'setuptools',
     }
 }
