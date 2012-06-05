@@ -13,7 +13,5 @@
 #
 
 class python {
-    case $operatingsystem {
-        default: { include python::base }
-    }
+  include python::base
 }

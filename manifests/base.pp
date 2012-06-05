@@ -1,5 +1,5 @@
 class python::base {
-    package{'python':
-        ensure => present,
-    }
+  package{'python':
+    ensure => present,
+  }
 }    
