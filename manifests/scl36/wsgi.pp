@@ -1,7 +1,9 @@
-class python::scl36::wsgi {
+class python::scl36::wsgi(
+  $wsg_pkg_name = 'rh-python36-mod_wsgi-system-httpd'
+) {
   require ::scl
-  package{"rh-python36-mod_wsgi":
-    ensure => $ensure,
+  package{$wsg_pkg_name:
+    ensure  => 'installed',
     require => Package['apache', 'rh-python36-python-virtualenv'],
     notify  => Service['apache'],
   }
