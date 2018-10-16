@@ -8,6 +8,6 @@ class python::scl36::wsgi(
     notify  => Service['apache'],
   }
   package{"rh-python36-python-virtualenv":
-    ensure => $ensure,
+    ensure => 'installed',
   }
 } 
